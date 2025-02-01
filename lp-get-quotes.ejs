@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 700px;
+            position: relative;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+
+        .left-content h1 {
+            color: #00AFEF;
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .left-content p {
+            color: #333;
+            font-size: 14px;
+        }
+
+        .right-content {
+            text-align: right;
+        }
+
+        .right-content p {
+            color: #0099ff;
+            font-size: 14px;
+            margin-bottom: 1rem;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            justify-content: flex-end;
+        }
+
+        .social-icons a {
+            color: #666;
+            text-decoration: none;
+        }
+
+        .contact-info {
+            text-align: right;
+            margin-top: 1rem;
+        }
+
+        .contact-info a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 8px;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            color: #333;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        .call-or-email {
+            text-align: right;
+            margin-top: 8px;
+        }
+
+        .call-or-email a {
+            color: #00AFEF;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .grid-form {
+            display: grid;
+            grid-template-columns: 1fr 0fr;
+            gap: 1.5em;
+        }
+
+        .contact-info a {
+            border: 1px solid rgb(160, 157, 157);
+            border-radius: 2em;
+            padding: 0.5em 0.8em;
+            text-align: start;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .right-content p,
+        .call-or-email-a {
+            text-wrap: nowrap;
+        }
+
+
+        .close-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .close-btn:hover {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" id="quoteForm">
+        <div class="header grid-form">
+            <div class="left-content">
+                <button class="close-btn" onclick="closeForm()">×</button>
+                <h1>Let's Connect</h1>
+                <p>We will help you solve your business problems</p>
+
+                <form>
+
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" placeholder="(88) 88888 88888" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message</label>
+                        <textarea id="message" placeholder="Describe your requirements"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Get Quote</button>
+                </form>
+            </div>
+            <div class="right-content">
+                <p>Know how we help businesses</p>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook">
+                        <svg fill="#373737" width="24px" height="24px" viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg" stroke="#373737">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 6.52998 17.5 2.03998 12 2.03998Z">
+                                </path>
+                            </g>
+                        </svg></a>
+                    <a href="#" aria-label="Twitter"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22"
+                            height="22" viewBox="0,0,256,256">
+                            <g fill="#373737" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+                                font-family="none" font-weight="none" font-size="none" text-anchor="none"
+                                style="mix-blend-mode: normal">
+                                <g transform="scale(5.12,5.12)">
+                                    <path
+                                        d="M6.91992,6l14.2168,20.72656l-14.9082,17.27344h3.17773l13.13867,-15.22266l10.44141,15.22266h10.01367l-14.87695,-21.6875l14.08008,-16.3125h-3.17578l-12.31055,14.26172l-9.7832,-14.26172z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg></a>
+                    <a href="#" aria-label="LinkedIn"><svg fill="#373737" version="1.1"
+                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22px"
+                            height="22px" viewBox="0 0 512 512" xml:space="preserve" stroke="#373737">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <g id="7935ec95c421cee6d86eb22ecd125aef">
+                                    <path style="display: inline; fill-rule: evenodd; clip-rule: evenodd;"
+                                        d="M116.504,500.219V170.654H6.975v329.564H116.504 L116.504,500.219z M61.751,125.674c38.183,0,61.968-25.328,61.968-56.953c-0.722-32.328-23.785-56.941-61.252-56.941 C24.994,11.781,0.5,36.394,0.5,68.722c0,31.625,23.772,56.953,60.53,56.953H61.751L61.751,125.674z M177.124,500.219 c0,0,1.437-298.643,0-329.564H286.67v47.794h-0.727c14.404-22.49,40.354-55.533,99.44-55.533 c72.085,0,126.116,47.103,126.116,148.333v188.971H401.971V323.912c0-44.301-15.848-74.531-55.497-74.531 c-30.254,0-48.284,20.38-56.202,40.08c-2.897,7.012-3.602,16.861-3.602,26.711v184.047H177.124L177.124,500.219z">
+                                    </path>
+                                </g>
+                            </g>
+                        </svg></a>
+                    <a href="#" aria-label="Instagram"><svg fill="#373737" width="27px" height="27px"
+                            viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#373737"
+                            stroke-width="0.00032">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M20.445 5h-8.891A6.559 6.559 0 0 0 5 11.554v8.891A6.559 6.559 0 0 0 11.554 27h8.891a6.56 6.56 0 0 0 6.554-6.555v-8.891A6.557 6.557 0 0 0 20.445 5zm4.342 15.445a4.343 4.343 0 0 1-4.342 4.342h-8.891a4.341 4.341 0 0 1-4.341-4.342v-8.891a4.34 4.34 0 0 1 4.341-4.341h8.891a4.342 4.342 0 0 1 4.341 4.341l.001 8.891z">
+                                </path>
+                                <path
+                                    d="M16 10.312c-3.138 0-5.688 2.551-5.688 5.688s2.551 5.688 5.688 5.688 5.688-2.551 5.688-5.688-2.55-5.688-5.688-5.688zm0 9.163a3.475 3.475 0 1 1-.001-6.95 3.475 3.475 0 0 1 .001 6.95zM21.7 8.991a1.363 1.363 0 1 1-1.364 1.364c0-.752.51-1.364 1.364-1.364z">
+                                </path>
+                            </g>
+                        </svg></a>
+                </div>
+                <div class="call-or-email">
+                    <a href="#">Call or Email Instead?</a>
+                </div>
+                <div class="contact-info">
+                    <a href="tel:+91-7977907989">+91 - 7977 907989<svg width="24px" height="24px" viewBox="0 0 24 24"
+                            fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#373737">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M10 8V7C10 6.05719 10 5.58579 10.2929 5.29289C10.5858 5 11.0572 5 12 5H17C17.9428 5 18.4142 5 18.7071 5.29289C19 5.58579 19 6.05719 19 7V12C19 12.9428 19 13.4142 18.7071 13.7071C18.4142 14 17.9428 14 17 14H16M7 19H12C12.9428 19 13.4142 19 13.7071 18.7071C14 18.4142 14 17.9428 14 17V12C14 11.0572 14 10.5858 13.7071 10.2929C13.4142 10 12.9428 10 12 10H7C6.05719 10 5.58579 10 5.29289 10.2929C5 10.5858 5 11.0572 5 12V17C5 17.9428 5 18.4142 5.29289 18.7071C5.58579 19 6.05719 19 7 19Z"
+                                    stroke="#373737" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg></a>
+                    <a href="mailto:sales@asprefab.com">sales@asprefab.com<svg width="24px" height="24px"
+                            viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#373737">
+                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                            <g id="SVGRepo_iconCarrier">
+                                <path
+                                    d="M10 8V7C10 6.05719 10 5.58579 10.2929 5.29289C10.5858 5 11.0572 5 12 5H17C17.9428 5 18.4142 5 18.7071 5.29289C19 5.58579 19 6.05719 19 7V12C19 12.9428 19 13.4142 18.7071 13.7071C18.4142 14 17.9428 14 17 14H16M7 19H12C12.9428 19 13.4142 19 13.7071 18.7071C14 18.4142 14 17.9428 14 17V12C14 11.0572 14 10.5858 13.7071 10.2929C13.4142 10 12.9428 10 12 10H7C6.05719 10 5.58579 10 5.29289 10.2929C5 10.5858 5 11.0572 5 12V17C5 17.9428 5 18.4142 5.29289 18.7071C5.58579 19 6.05719 19 7 19Z"
+                                    stroke="#373737" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </g>
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function closeForm() {
+            document.getElementById("quoteForm").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>
